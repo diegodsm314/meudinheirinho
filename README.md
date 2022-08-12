@@ -1,13 +1,9 @@
-# meudinheirinho
+# Meu Dinheirinho
 
----------------------------
-SEÇÃO OCULTA
-----------------------------
-Marlene para instalar a aplicação use:
---> npm install
+Aplicação responsiva de organização em categorias de finanças pessoais, com lista de entrada, saída e *dashboard* de gastos totais.
 
-para executar utilize 
---> npm run dev
---> json-server --watch backend/user.json
---> json-server --watch backend/data.json
---------------------------------------------------------------
+
+## Objetivos
+
+Desenvolvimento de aplização como projeto final em desenvolvimento *front-end* em React.js, conteúdo do terceiro módulo em *Learning & Development*.
+
