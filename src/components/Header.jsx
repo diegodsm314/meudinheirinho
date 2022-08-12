@@ -20,7 +20,7 @@ export function Header(){
 
     return (
         <>
-        <img src={image} alt="logo" srcset="" />
+        <img src={image} alt="logo" />
         <p className='headerIcon'>Meu dinheirinho</p>
         <p className="name">Seja bem vindo {nome}</p>
         <div className="mb-2">

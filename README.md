@@ -8,6 +8,5 @@ Marlene para instalar a aplicação use:
 
 para executar utilize 
 --> npm run dev
---> json-server --watch backend/user.json
 --> json-server --watch backend/data.json
 --------------------------------------------------------------
