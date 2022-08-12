@@ -7,3 +7,8 @@ Aplicação responsiva de organização em categorias de finanças pessoais, com
 
 Desenvolvimento de aplização como projeto final em desenvolvimento *front-end* em React.js, conteúdo do terceiro módulo em *Learning & Development*.
 
+---
+para executar utilize 
+--> npm run dev
+--> json-server --watch backend/data.json
+--------------------------------------------------------------
