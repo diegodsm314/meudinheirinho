@@ -7,7 +7,7 @@
     --active-effect:#ab8ff8;
     --positive: #33CC95;
     --negative: #E62E4D;
-    --bg-card: #FFFFFF;
+    --white: #FFFFFF;
     --titles: #363F5F;
     --text: #969CB3;
     --background: #F0F2F5;
@@ -21,5 +21,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
 }
+
+
 

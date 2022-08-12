@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 160px 132px;
+    background-color: var(--primary);
+}
+
+header, 
+.btn-transaction {
+   color: var(--white); 
+   font-size: 16px;
+   font-weight: 600;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-transaction{
+    border: none;
+    background-color: var(--secondary);
+}
+
+.btn-transaction:hover {
+    background-color: var(--hover-effect);
+}
+
+.btn-transaction:active {
+    background-color: var(--active-effect);
+}
