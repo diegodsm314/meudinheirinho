@@ -1,9 +1,32 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+  "count": [
+    {
+      "id": 1,
+      "idUser": 1001,
+      "countNumber": 1,
+      "countValue": 1.00,
+      "entry": [
+        {
+        "price": 1.00,
+        "title": "teste",
+        "category": "testeCategoria",
+        "date": "01/01/2000"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "idUser": 1002,
+      "countNumber": 2,
+      "countValue": 1.00,
+      "entry": [
+        {
+        "price": 1.00,
+        "title": "teste2",
+        "category": "testeCategoria",
+        "date": "01/01/2000"
+        }
+      ]
+    }
+  ]
 }
