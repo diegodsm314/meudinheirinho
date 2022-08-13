@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { CardGroup } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import user from '../services/user';
 
@@ -13,7 +12,7 @@ function CardUnique(){
     console.log(counts);
   }, [])
   return (
-    <CardGroup>
+    <div className="crt">
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="right" src="" />
       <Card.Body>
@@ -41,7 +40,7 @@ function CardUnique(){
         </Card.Text>
       </Card.Body>
     </Card>
-    </CardGroup>
+    </div>
   )
 }
 
