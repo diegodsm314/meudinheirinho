@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
+import '../components/Card.css';
 import user from '../services/user';
 
-function CardUnique(){
+function CardUnique() {
   const [counts, setCounts] = useState([]);
 
   useEffect(() => {
@@ -12,34 +13,31 @@ function CardUnique(){
     console.log(counts);
   }, [])
   return (
-    <div className="crt">
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="right" src="" />
-      <Card.Body>
-        <Card.Title>Entradas</Card.Title>
-        <Card.Text>
-          R$ {}
-        </Card.Text>
-      </Card.Body>
-    </Card>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="" />
-      <Card.Body>
-        <Card.Title>Saídas</Card.Title>
-        <Card.Text>
-          R$ {}
-        </Card.Text>
-      </Card.Body>
-    </Card>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="" />
-      <Card.Body>
-        <Card.Title>Total</Card.Title>
-        <Card.Text>
-          R$ {}
-        </Card.Text>
-      </Card.Body>
-    </Card>
+    <div className="summary">
+      <Card className="card">
+        <Card.Body>
+          <Card.Title className="card-title">Entradas</Card.Title>
+          <Card.Text>
+            R$ { }
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card className="card">
+        <Card.Body>
+          <Card.Title className="card-title">Saídas</Card.Title>
+          <Card.Text>
+            R$ { }
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card className="card">
+        <Card.Body>
+          <Card.Title className="card-title">Total</Card.Title>
+          <Card.Text>
+            R$ { }
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </div>
   )
 }
