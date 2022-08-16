@@ -22,7 +22,7 @@ export function Header() {
     return (
         <header>
             <div className='logo'>
-                <img src={image} alt="logo" srcset="" />
+                <img src={image} alt="logo"/>
                 <p className='headerIcon'>Meu dinheirinho</p>
             </div>
 
