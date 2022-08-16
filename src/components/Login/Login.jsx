@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-
+import './Login.css';
 
 
 export function Login() {
@@ -22,7 +22,10 @@ export function Login() {
                 <FloatingLabel controlId="floatingPassword" label="Password">
                     <Form.Control type="password" placeholder="Password" onChange={(evento) => setPass(evento.target.value)} />
                 </FloatingLabel>
-                <Button type="submit">Ok</Button>
+                <div className="div-btn-ok">
+                    <Button className="button-ok" type="submit">Ok</Button>
+                </div>
+                
             </Form>
         </div>
     )
