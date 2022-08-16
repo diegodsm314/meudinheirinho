@@ -11,18 +11,21 @@
     --title: #363F5F;
     --text: #969CB3;
     --background: #F0F2F5;
+
 }
 
 * {
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--background);
-}
+  }
+
 
 
 
