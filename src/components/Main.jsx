@@ -12,9 +12,10 @@ export function Main() {
             <Container>
                 <Row>
                     <CardUnique></CardUnique>
-                    <Col>1 of 1</Col>
+
                 </Row>
             </Container>
+            <Login></Login>
         </>
     )
 }
