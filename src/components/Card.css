@@ -4,8 +4,27 @@
     gap: 2rem;
     margin-top: -10rem;
     margin: 0 2rem;
+    font: 400 normal 'Poppins';
+}
+
+.card {
+    border: none;
 }
 
 .card-title {
+    font-size: 16px;
+}
+
+.card-text {
+    font-size: 32px;
+}
+
+
+.white-card {
     color: var(--title);
+}
+
+.green-card {
+    background-color: var(--positive);
+    color: var(--white);
 }

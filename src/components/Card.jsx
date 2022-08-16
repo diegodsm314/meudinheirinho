@@ -14,26 +14,26 @@ function CardUnique() {
   }, [])
   return (
     <div className="summary">
-      <Card className="card">
+      <Card className="card white-card">
         <Card.Body>
           <Card.Title className="card-title">Entradas</Card.Title>
-          <Card.Text>
+          <Card.Text className="card-text">
             R$ { }
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className="card">
+      <Card className="card white-card">
         <Card.Body>
           <Card.Title className="card-title">Saídas</Card.Title>
-          <Card.Text>
+          <Card.Text className="card-text">
             R$ { }
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className="card">
+      <Card className="card green-card">
         <Card.Body>
           <Card.Title className="card-title">Total</Card.Title>
-          <Card.Text>
+          <Card.Text className="card-text">
             R$ { }
           </Card.Text>
         </Card.Body>
