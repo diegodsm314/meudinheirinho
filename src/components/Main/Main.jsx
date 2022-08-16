@@ -1,9 +1,8 @@
 import React from "react";
-import CardUnique from "./Card";
+import CardUnique from "../Card/Card";
 import { Login } from "../Login/Login";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 
 export function Main() {
@@ -12,10 +11,6 @@ export function Main() {
             <Container>
                 <Row>
                     <CardUnique></CardUnique>
-<<<<<<< HEAD:src/components/Main.jsx
-
-=======
->>>>>>> refs/remotes/origin/main:src/components/Main/Main.jsx
                 </Row>
             </Container>
             <Login></Login>
