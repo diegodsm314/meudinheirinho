@@ -1,15 +1,16 @@
 .summary {
     display: flex;
     align-items: center;
+    margin: 0 auto;
     justify-content: space-around;
     transform: translateY(-50%);    
     flex-wrap: wrap;
-    margin: 0 auto;
     font: 400 normal 'Poppins';
 }
 
 .card {
     border: none;
+    box-shadow: 0.5px 0.5px 2px black;
     width: 18rem;
 }
 
