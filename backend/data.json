@@ -3,50 +3,52 @@
     {
       "id": 1,
       "user": "admin",
+      "email": "admin@test.com",
       "idUser": 1001,
       "passworld": "adminroot"
     },
     {
       "id": 2,
       "user": "userteste",
+      "email": "test@test.com",
       "idUser": 1002,
       "passworld": "useruser"
     }
   ],
-"count": [
-  {
-    "id": 1,
-    "idUser": 1001,
-    "countNumber": 1,
-    "countValue": 1.00,
-    "entry": [
-      {
-      "price": 1.00,
-      "title": "teste",
-      "category": "testeCategoria",
-      "date": "01/01/2000"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "idUser": 1002,
-    "countNumber": 2,
-    "countValue": 1.00,
-    "entry": [
-      {
-      "price": 1.00,
-      "title": "teste2",
-      "category": "testeCategoria",
-      "date": "01/01/2000"
-      },
-      {
-        "price": 2.00,
-        "title": "teste4",
-        "category": "testeCategoria2",
-        "date": "01/02/2000"
-      }
-    ]
-  }
-]
+  "count": [
+    {
+      "id": 1,
+      "idUser": 1001,
+      "countNumber": 1,
+      "countValue": 1.00,
+      "entry": [
+        {
+          "price": 1.00,
+          "title": "teste",
+          "category": "testeCategoria",
+          "date": "01/01/2000"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "idUser": 1002,
+      "countNumber": 2,
+      "countValue": 1.00,
+      "entry": [
+        {
+          "price": 1.00,
+          "title": "teste2",
+          "category": "testeCategoria",
+          "date": "01/01/2000"
+        },
+        {
+          "price": 2.00,
+          "title": "teste4",
+          "category": "testeCategoria2",
+          "date": "01/02/2000"
+        }
+      ]
+    }
+  ]
 }
