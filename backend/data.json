@@ -37,13 +37,13 @@
       "countValue": 1.00,
       "entry": [
         {
-          "price": 1.00,
+          "price": 0.50,
           "title": "teste2",
           "category": "testeCategoria",
           "date": "01/01/2000"
         },
         {
-          "price": 2.00,
+          "price": 0.50,
           "title": "teste4",
           "category": "testeCategoria2",
           "date": "01/02/2000"

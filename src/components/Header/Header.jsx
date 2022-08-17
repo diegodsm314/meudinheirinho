@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import '../../App.css';
 import './Header.css';
 import Button from 'react-bootstrap/Button';
-import user from '../../services/user'
+import data from '../../services/data'
 import image from '../../../public/vite.svg'
 
 
@@ -13,7 +13,7 @@ export function Header() {
 
     useEffect(() => {
         //setar o usuario IMCOMPLETO
-        user.get("users").then(({ data }) => {
+        data.get("users").then(({ data }) => {
             setNomes(data);
             //setNome(data.user);
         })

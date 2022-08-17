@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import './Card.css';
-import user from '../../services/user';
+import user from '../../services/data';
 
 function CardUnique() {
   const [counts, setCounts] = useState([]);
