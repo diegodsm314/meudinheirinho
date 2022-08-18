@@ -4,6 +4,7 @@ import './Header.css';
 import Button from 'react-bootstrap/Button';
 import image from '../../../public/vite.svg'
 import GlobalContext from "../../context/GlobalContext";
+import { Login } from '../Login/Login';
 
 
 export function Header() {
@@ -20,14 +21,12 @@ export function Header() {
                 <img src={image} alt="logo"/>
                 <p className='headerIcon'>Meu dinheirinho</p>
             </div>
-
-            <p className="name">Seja bem vindo {nome}</p>
+            <div className="login">
+                <Login></Login>
+                <p className="name">Seja bem vindo {nome}</p>
+            </div>
             <div className="mb-2">
-                <Button
-                    variant="secondary"
-                    size="lg"
-                    className='btn-transaction'
-                >
+                <Button size="lg" className='btn-transaction'>
                     Nova transação
                 </Button>
             </div>

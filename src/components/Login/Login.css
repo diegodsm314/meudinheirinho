@@ -1,3 +1,4 @@
+/*
 .formulary {
     display: flex;
     align-items: center;
@@ -10,6 +11,27 @@
     border-radius: 10px;
     box-shadow: 0.5px 0.5px 2px black;
 }
+*/
+
+.btn-login {
+    color: var(--white); 
+    font-size: 16px;
+    font-weight: 600;
+}
+ 
+ .btn-login{
+     border: none;
+     background-color: var(--secondary);
+ }
+ 
+ .btn-login:hover {
+     background-color: var(--hover-effect);
+ }
+ 
+ .btn-login:active {
+     background-color: var(--active-effect);
+ }
+ 
 
 .div-btn-ok {
     display: flex;

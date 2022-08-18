@@ -23,7 +23,7 @@ export function Login() {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button className="btn-login" onClick={handleShow}>
                 Login
             </Button>
             <div className="formulary">

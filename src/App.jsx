@@ -21,7 +21,6 @@ function App() {
       <Main>
         <Card></Card>
       </Main>
-      <Login></Login>
     </GlobalProvider>
   )
 }
