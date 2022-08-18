@@ -26,8 +26,8 @@ export function Login() {
             <Button className="btn-login" size="lg" onClick={handleShow}>
                 Login
             </Button>
-            <div className="formulary">
-                <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose}>
+                <div className="formulary">
                     <Modal.Header closeButton>
                         <Modal.Title>Entrar</Modal.Title>
                     </Modal.Header>
@@ -48,10 +48,8 @@ export function Login() {
                             </div>
                         </Form>
                     </Modal.Body>
-                    <Modal.Footer>
-                    </Modal.Footer>
-                </Modal>
-            </div>
+                </div>
+            </Modal>
         </>
     )
 }

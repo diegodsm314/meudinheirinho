@@ -1,7 +1,15 @@
-.btn-login {
-    color: var(--white); 
-    font-size: 16px;
-    font-weight: 600;
+.formulary {
+    padding: 1rem;
+}
+
+.outline-border {
+    color: var(--title); 
+    font-size: 14px;
+    font-weight: 400;
+    border: 1.5px solid #d3d3d3;
+    padding: 16px 12px;
+    margin-bottom: 16px;
+    width: 50%;
 }
  
  .btn-login{

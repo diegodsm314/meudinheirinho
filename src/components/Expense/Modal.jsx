@@ -3,6 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import './Modal.css';
 import Modal from 'react-bootstrap/Modal';
+import { ArrowUpCircle, ArrowDownCircle } from 'react-bootstrap-icons';
 
 
 export function ModalUnique() {
@@ -37,8 +38,8 @@ export function ModalUnique() {
             <Button size="lg" className='btn-transaction' onClick={handleShow}>
                     Nova transação
             </Button>
-            <div className="formulary">
                 <Modal show={show} onHide={handleClose}>
+            <div className="formulary">
                     <Modal.Header closeButton>
                         <Modal.Title>Cadastrar Transação</Modal.Title>
                     </Modal.Header>
@@ -58,12 +59,11 @@ export function ModalUnique() {
                             >
                                 <Form.Control type="text" placeholder="Preço" onChange={(evento) => setPrice(evento.target.value)} />
                             </FloatingLabel>
-                            <div className="div-btn-entrada">
-                                <Button className="" onClick={() => {setStatus(true)}}>Entrada</Button>
+                            <div className="flex-btn">
+                                <Button className="outline-border" variant="outline" onClick={() => {setStatus(true)}}> <ArrowUpCircle className='icon-card arrow-up'/> Entrada</Button>
+                                <Button className="outline-border" variant="outline"  onClick={() => {setStatus(false)}}> <ArrowDownCircle className='icon-card arrow-down'/> Saída</Button>
                             </div>
-                            <div className="div-btn-saida">
-                                <Button className="" onClick={() => {setStatus(false)}}>Saída</Button>
-                            </div>
+
                             <FloatingLabel
                                 controlId="floatingInput"
                                 label="Categoria"
@@ -72,15 +72,13 @@ export function ModalUnique() {
                                 <Form.Control type="text" placeholder="Categoria" onChange={(evento) => setCategory(evento.target.value)} />
                             </FloatingLabel>
 
-                            <div className="div-btn-ok">
-                                <Button className="button-cadastrar" onClick={() => {}}>Cadastrar</Button>
+                            <div className="div-btn-update">
+                                <Button className="button-update" onClick={() => {}}>Cadastrar</Button>
                             </div>
                         </Form>
                     </Modal.Body>
-                    <Modal.Footer>
-                    </Modal.Footer>
-                </Modal>
             </div>
+                </Modal>
         </>
     )
 }
