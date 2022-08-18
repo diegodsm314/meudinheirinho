@@ -1,23 +1,18 @@
-import { React, useEffect, useState } from 'react';
+import { React, useEffect, useState, useContext } from 'react';
 import '../../App.css';
 import './Header.css';
 import Button from 'react-bootstrap/Button';
-import data from '../../services/data'
 import image from '../../../public/vite.svg'
+import GlobalContext from "../../context/GlobalContext";
 
 
 export function Header() {
-    const [nomes, setNomes] = useState([]);
-    const [nome, setNome] = useState("ABC");
+    const globalCtx = useContext(GlobalContext);
+    const [nome, setNome] = useState("");
 
-
-    useEffect(() => {
-        //setar o usuario IMCOMPLETO
-        data.get("users").then(({ data }) => {
-            setNomes(data);
-            //setNome(data.user);
-        })
-    }, [])
+    useEffect(()=>{
+        setNome(globalCtx.login)
+    },[globalCtx])
 
     return (
         <header>

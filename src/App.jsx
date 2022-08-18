@@ -6,9 +6,14 @@ import { Main } from './components/Main/Main';
 import { Card } from 'react-bootstrap';
 import { Login } from './components/Login/Login';
 import GlobalProvider from './context/GlobalProvider';
+import Button from 'react-bootstrap/Button';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const handleCss = () => {
+    setActive(!active);
+    return active ? "showButton" : "closedButton";
+  }
+
 
   return (
     <GlobalProvider>

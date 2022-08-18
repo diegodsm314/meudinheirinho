@@ -26,6 +26,14 @@
     font-family: 'Poppins', sans-serif;
   }
 
+  .showButton{
+
+  }
+
+  .closedButton{
+    width: 0;
+  }
+
 
 
 
