@@ -19,6 +19,7 @@ function CardUnique() {
           <Card.Title className="card-title">Entradas</Card.Title>
           <Card.Text className="card-text">
             R$ { }
+            <span className='white-card'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
       </Card>
@@ -27,6 +28,7 @@ function CardUnique() {
           <Card.Title className="card-title">Saídas</Card.Title>
           <Card.Text className="card-text">
             R$ { }
+            <span className='white-card'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
       </Card>
@@ -35,6 +37,7 @@ function CardUnique() {
           <Card.Title className="card-title">Total</Card.Title>
           <Card.Text className="card-text">
             R$ { }
+            <span className='span-green'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
       </Card>
