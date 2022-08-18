@@ -26,7 +26,8 @@
           "price": 1.00,
           "title": "teste",
           "category": "testeCategoria",
-          "date": "01/01/2000"
+          "date": "01/01/2000",
+          "statusEntry": true
         }
       ]
     },
@@ -40,13 +41,15 @@
           "price": 0.50,
           "title": "teste2",
           "category": "testeCategoria",
-          "date": "01/01/2000"
+          "date": "01/01/2000",
+          "statusEntry": false
         },
         {
           "price": 0.50,
           "title": "teste4",
           "category": "testeCategoria2",
-          "date": "01/02/2000"
+          "date": "01/02/2000",
+          "statusEntry": false
         }
       ]
     }

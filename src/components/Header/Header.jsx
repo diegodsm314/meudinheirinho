@@ -1,10 +1,10 @@
 import { React, useEffect, useState, useContext } from 'react';
 import '../../App.css';
 import './Header.css';
-import Button from 'react-bootstrap/Button';
 import image from '../../../public/vite.svg'
 import GlobalContext from "../../context/GlobalContext";
 import { Login } from '../Login/Login';
+import { ModalUnique } from '../Expense/Modal';
 
 
 export function Header() {
@@ -26,9 +26,7 @@ export function Header() {
             </div>
             <div className="buttons mb-2">
                 <Login></Login>
-                <Button size="lg" className='btn-transaction'>
-                    Nova transação
-                </Button>
+                <ModalUnique></ModalUnique>
             </div>
         </header>
     )
