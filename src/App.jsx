@@ -4,17 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header } from './components/Header/Header'
 import { Main } from './components/Main/Main';
 import { Card } from 'react-bootstrap';
+import { Login } from './components/Login/Login';
+import GlobalProvider from './context/GlobalProvider';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    <Header></Header>
-    <Main>
-      <Card></Card>
-    </Main>
-    </>
+    <GlobalProvider>
+      <Header></Header>
+      <Main>
+        <Card></Card>
+      </Main>
+      <Login></Login>
+    </GlobalProvider>
   )
 }
 

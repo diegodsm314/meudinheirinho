@@ -13,7 +13,6 @@ export function Main() {
                     <CardUnique></CardUnique>
                 </Row>
             </Container>
-            <Login></Login>
         </>
     )
 }
