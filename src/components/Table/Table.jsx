@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import './Table.css';
 
 export function TableUnique() {
     const [tab,setTab] = useState([]);
@@ -14,16 +15,16 @@ export function TableUnique() {
 
     return (
         <div className="table">
-            <Table striped bordered hover>
+            <Table>
                 <thead>
                     <tr>
-                        <th>Titulo</th>
-                        <th>Valor</th>
-                        <th>Categoria</th>
-                        <th>Data</th>
+                        <th className="row-title">Título</th>
+                        <th className="row-title">Valor</th>
+                        <th className="row-title">Categoria</th>
+                        <th className="row-title">Data</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="row-item">
                     <tr>
                         <td>{"A"}</td>
                         <td>{"B"}</td>

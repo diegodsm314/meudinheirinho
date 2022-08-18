@@ -1,0 +1,10 @@
+
+.row-title{
+    color: var(--text);
+    font-weight: 400;
+}
+
+.row-item { 
+    background-color: var(--white);
+
+}
