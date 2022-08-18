@@ -22,10 +22,10 @@ export function Header() {
                 <p className='headerIcon'>Meu dinheirinho</p>
             </div>
             <div className="login">
-                <Login></Login>
                 <p className="name">Seja bem vindo {nome}</p>
             </div>
-            <div className="mb-2">
+            <div className="buttons mb-2">
+                <Login></Login>
                 <Button size="lg" className='btn-transaction'>
                     Nova transação
                 </Button>

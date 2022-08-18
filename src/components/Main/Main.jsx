@@ -3,6 +3,7 @@ import CardUnique from "../Card/Card";
 import { Login } from "../Login/Login";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import { TableUnique } from "../Table/Table";
 
 
 export function Main() {
@@ -11,6 +12,9 @@ export function Main() {
             <Container>
                 <Row>
                     <CardUnique></CardUnique>
+                </Row>
+                <Row>
+                    <TableUnique></TableUnique>
                 </Row>
             </Container>
         </>

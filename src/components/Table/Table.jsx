@@ -4,12 +4,12 @@ import { Table } from "react-bootstrap";
 export function TableUnique() {
     const [tab,setTab] = useState([]);
 
-    useEffect(() => {
-        //setar o usuario IMCOMPLETO
-        user.get("count").then(({ data }) => {
-            setTab(data);
-        })
-    }, [])
+    // useEffect(() => {
+    //     //setar o usuario INCOMPLETO
+    //     data.get("count").then(({ data }) => {
+    //         setTab(data);
+    //     })
+    // }, [])
     
 
     return (
