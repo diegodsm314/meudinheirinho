@@ -32,11 +32,29 @@
     width: 18rem;
 }
 
-.card-title {
+.div-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-card{
+    font-size: 24px;
+}
+
+.arrow-up {
+    color: var(--positive);
+}
+
+.arrow-down {
+    color: var(--negative);
+}
+
+.card-title{
     font-size: 16px;
 }
 
-.card-text {
+.card-text  {
     font-size: 32px;
 }
 
