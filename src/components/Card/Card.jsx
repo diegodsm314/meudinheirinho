@@ -1,20 +1,29 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Card from 'react-bootstrap/Card';
 import './Card.css';
 import data from '../../services/data';
 import { ArrowUpCircle, ArrowDownCircle, CurrencyDollar} from 'react-bootstrap-icons';
+import GlobalContext from '../../context/GlobalContext';
 
 function CardUnique() {
   const [counts, setCounts] = useState([]);
-  const [expen, setExpen] = useState(12.01);
-  const [value, setValue] = useState(9.98);
+  const [expen, setExpen] = useState(0.00);
+  const [value, setValue] = useState(0.00);
+
+  const globalCtx = useContext(GlobalContext);
+  const [tab,setTab] = useState();
 
   useEffect(() => {
-    data.get("count").then(({ data }) => {
-      setCounts(data);
-    })
-    //console.log(counts);
-  }, [])
+      data.get("count").then(function (response){
+          const aux = response.data;
+          const baux = aux.filter(user => user.idUser == globalCtx.idUser)
+          setTab(baux[0]);
+          setExpen(baux[0].countExpense);
+          setValue(baux[0].countValue)
+      })  
+  }, [globalCtx]);
+
+  console.log(tab);
 
 
   return (
@@ -26,7 +35,7 @@ function CardUnique() {
             <ArrowUpCircle className='icon-card arrow-up'/>
           </div>
           <Card.Text className="card-text">
-            R$ {value}
+            R$ {(value).toFixed(2)}
             <span className='white-card'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
@@ -38,7 +47,7 @@ function CardUnique() {
           <ArrowDownCircle className='icon-card arrow-down'/>
         </div>
           <Card.Text className="card-text">
-            R$ {expen}
+            R$ {(expen).toFixed(2)}
             <span className='white-card'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
