@@ -31,8 +31,6 @@ export function ModalUnique() {
     const [date, setDate] = useState(dating);
     const [status, setStatus] = useState(false);
 
-    console.log(date);
-
     return (
         <>
             <Button size="lg" className='btn-transaction' onClick={handleShow}>

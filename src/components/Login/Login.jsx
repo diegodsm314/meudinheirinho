@@ -1,30 +1,54 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import './Login.css';
 import GlobalContext from "../../context/GlobalContext";
 import Modal from 'react-bootstrap/Modal';
+import data from "../../services/data";
 
 
 export function Login() {
     const [show, setShow] = useState(false);
     const [active, setActive] = useState(false);
+    const [users, setUsers] = useState([]);
+    const [log,setLog] = useState("Login");
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    console.log(active);
 
     const globalCtx = useContext(GlobalContext);
     const [user, setUser] = useState("");
     const [pass, setPass] = useState("");
 
-    console.log(globalCtx);
-
+    useEffect(() => {
+        data.get("users").then(function (response){
+            console.log(response.data);
+            setUsers(response.data);
+        })
+        
+      }, [])
+    
+    function setLogin(user, password){
+        users.map((it)=>{
+            console.log(it.user,it.password);
+            if(it.user==user){
+                if (it.password==password) {
+                    console.log("Usuario encontrado nessa caralea");
+                    setLog(it.user);
+                    globalCtx.onLogin(user, pass, it.idUser);
+                    return 0;
+                }
+            }
+            else{
+                console.log("Usuario não encontrado");
+            }
+        })
+    }
 
     return (
         <>
             <Button className="btn-login" size="lg" onClick={handleShow}>
-                Login
+                {log}
             </Button>
             <Modal show={show} onHide={handleClose}>
                 <div className="formulary">
@@ -44,7 +68,7 @@ export function Login() {
                                 <Form.Control type="password" placeholder="Password" onChange={(evento) => setPass(evento.target.value)} />
                             </FloatingLabel>
                             <div className="div-btn-ok">
-                                <Button className="button-ok" onClick={() => { globalCtx.onLogin(user, pass, 99); handleClose() }}>Ok</Button>
+                                <Button className="button-ok" onClick={() => { setLogin(user,pass); handleClose() }}>Ok</Button>
                             </div>
                         </Form>
                     </Modal.Body>

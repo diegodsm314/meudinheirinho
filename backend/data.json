@@ -5,14 +5,14 @@
       "user": "admin",
       "email": "admin@test.com",
       "idUser": 1001,
-      "passworld": "adminroot"
+      "password": "adminroot"
     },
     {
       "id": 2,
       "user": "userteste",
       "email": "test@test.com",
       "idUser": 1002,
-      "passworld": "useruser"
+      "password": "useruser"
     }
   ],
   "count": [

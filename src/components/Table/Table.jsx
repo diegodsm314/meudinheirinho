@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Table } from "react-bootstrap";
 import './Table.css';
+import data from "../../services/data";
+import GlobalContext from "../../context/GlobalContext";
 
 export function TableUnique() {
+    const globalCtx = useContext(GlobalContext);
     const [tab,setTab] = useState([]);
 
-    // useEffect(() => {
-    //     //setar o usuario INCOMPLETO
-    //     data.get("count").then(({ data }) => {
-    //         setTab(data);
-    //     })
-    // }, [])
+    useEffect(() => {
+        data.get("count").then(function (response){
+            console.log(response.data);
+            setTab(response.data.filter(user => user == globalCtx.idUser));
+        })  
+      }, [])
+
+      console.log(tab);
     
 
     return (

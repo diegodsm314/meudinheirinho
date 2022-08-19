@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import './Card.css';
-import user from '../../services/data';
+import data from '../../services/data';
 import { ArrowUpCircle, ArrowDownCircle, CurrencyDollar} from 'react-bootstrap-icons';
 
 function CardUnique() {
   const [counts, setCounts] = useState([]);
 
   useEffect(() => {
-    user.get("count").then(({ data }) => {
+    data.get("count").then(({ data }) => {
       setCounts(data);
     })
-    console.log(counts);
+    //console.log(counts);
   }, [])
   return (
     <div className="summary">
