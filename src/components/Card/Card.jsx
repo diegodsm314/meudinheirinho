@@ -6,6 +6,8 @@ import { ArrowUpCircle, ArrowDownCircle, CurrencyDollar} from 'react-bootstrap-i
 
 function CardUnique() {
   const [counts, setCounts] = useState([]);
+  const [expen, setExpen] = useState(12.01);
+  const [value, setValue] = useState(9.98);
 
   useEffect(() => {
     data.get("count").then(({ data }) => {
@@ -22,7 +24,7 @@ function CardUnique() {
             <ArrowUpCircle className='icon-card arrow-up'/>
           </div>
           <Card.Text className="card-text">
-            R$ { }
+            R$ {value}
             <span className='white-card'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
@@ -34,7 +36,7 @@ function CardUnique() {
           <ArrowDownCircle className='icon-card arrow-down'/>
         </div>
           <Card.Text className="card-text">
-            R$ { }
+            R$ {expen}
             <span className='white-card'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
@@ -46,7 +48,7 @@ function CardUnique() {
             <CurrencyDollar className='icon-card'/>
           </div>
           <Card.Text className="card-text">
-            R$ { }
+            R$ {(value-expen).toFixed(2)}
             <span className='span-green'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>

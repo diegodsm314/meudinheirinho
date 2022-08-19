@@ -19,7 +19,7 @@
     {
       "id": 1,
       "idUser": 1001,
-      "countNumber": 1,
+      "countExpense": 1.00,
       "countValue": 1.00,
       "entry": [
         {
@@ -34,7 +34,7 @@
     {
       "id": 2,
       "idUser": 1002,
-      "countNumber": 2,
+      "countExpense": 2.00,
       "countValue": 1.00,
       "entry": [
         {
