@@ -9,7 +9,6 @@ function CardUnique() {
   const globalCtx = useContext(GlobalContext);
   const [expen, setExpen] = useState(0.00);
   const [value, setValue] = useState(0.00);
-
   
 
   useEffect(() => {
@@ -21,6 +20,15 @@ function CardUnique() {
       })  
   }, [globalCtx]);
 
+
+  function handleClass(){
+    if((value-expen)<0){
+      return "card red-card";
+    }
+    else{
+      return "card green-card";
+    }
+  }
 
   return (
     <div className="summary">
@@ -48,7 +56,7 @@ function CardUnique() {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className="card green-card">
+      <Card className={handleClass()}>
         <Card.Body>
           <div className='div-card-title'>
             <Card.Title className="card-title">Total</Card.Title>

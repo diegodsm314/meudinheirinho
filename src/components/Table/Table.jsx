@@ -17,8 +17,6 @@ export function TableUnique() {
             setEntry(baux[0].entry);
         })  
     }, [globalCtx]);
-
-    console.log(entry);
     
     return (
         <div className="table">
@@ -34,11 +32,11 @@ export function TableUnique() {
                 <tbody className="row-item">
                 {entry.map((it,id)=>{
                             return(
-                                <tr>
-                                <td key={id}>{it.title}</td>
-                                <td key={id}>{it.price}</td>
-                                <td key={id}>{it.category}</td>
-                                <td key={id}>{it.date}</td>
+                                <tr key={id}>
+                                <td >{it.title}</td>
+                                <td >{new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(it.price)}</td>
+                                <td >{it.category}</td>
+                                <td >{it.date}</td>
                             </tr>
                             )
                         })}

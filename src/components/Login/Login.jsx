@@ -9,7 +9,6 @@ import data from "../../services/data";
 
 export function Login() {
     const [show, setShow] = useState(false);
-    const [active, setActive] = useState(false);
     const [users, setUsers] = useState([]);
     const [log,setLog] = useState("Login");
 
@@ -22,27 +21,28 @@ export function Login() {
 
     useEffect(() => {
         data.get("users").then(function (response){
-            console.log(response.data);
             setUsers(response.data);
         })
         
       }, [])
     
     function setLogin(user, password){
+        let stats = true;
         users.map((it)=>{
-            console.log(it.user,it.password);
             if(it.user==user){
                 if (it.password==password) {
-                    console.log("Usuario encontrado nessa caralea");
+                    stats=false;
                     setLog(it.user);
                     globalCtx.onLogin(user, pass, it.idUser);
-                    return 0;
+                }
+                else{
+                    console.log("Senha incorreta");
                 }
             }
-            else{
-                console.log("Usuario não encontrado");
-            }
         })
+        if(stats){
+            console.log("Usuario não encontrado");
+        }
     }
 
     return (

@@ -71,6 +71,11 @@ span {
     color: var(--white);
 }
 
+.red-card {
+    background-color: var(--negative);
+    color: var(--white);
+}
+
 span.white-card {
     color: var(--text);
 }
