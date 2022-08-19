@@ -15,6 +15,8 @@ function CardUnique() {
     })
     //console.log(counts);
   }, [])
+
+
   return (
     <div className="summary">
       <Card className="card white-card">

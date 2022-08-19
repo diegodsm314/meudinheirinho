@@ -31,10 +31,10 @@ export function TableUnique() {
                 </thead>
                 <tbody className="row-item">
                     <tr>
-                        <td>{"A"}</td>
-                        <td>{"B"}</td>
-                        <td>{"C"}</td>
-                        <td>{"D"}</td>
+                        <td>{"Sem"}</td>
+                        <td>{"acesso"}</td>
+                        <td>{"de"}</td>
+                        <td>{"dados"}</td>
                     </tr>
                 </tbody>
             </Table>
