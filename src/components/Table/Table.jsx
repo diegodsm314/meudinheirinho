@@ -6,16 +6,17 @@ import GlobalContext from "../../context/GlobalContext";
 
 export function TableUnique() {
     const globalCtx = useContext(GlobalContext);
-    const [tab,setTab] = useState([]);
+    const [tab,setTab] = useState();
 
     useEffect(() => {
         data.get("count").then(function (response){
-            console.log(response.data);
-            setTab(response.data.filter(user => user == globalCtx.idUser));
+            const aux = response.data;
+            const baux = aux.filter(user => user.idUser == globalCtx.idUser)
+            setTab(baux[0]);
         })  
-      }, [])
+    }, [globalCtx]);
 
-      console.log(tab);
+    console.log(tab);
     
 
     return (
