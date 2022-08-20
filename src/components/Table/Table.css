@@ -6,5 +6,8 @@
 
 .row-item { 
     background-color: var(--white);
+}
 
+tr {
+    border: 6px solid var(--background);
 }
