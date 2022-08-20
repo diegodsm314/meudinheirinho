@@ -12,6 +12,7 @@ a {
   color: var(--primary);
   text-decoration: inherit;
 }
+
 a:hover {
   color: var(--secondary);
 }
@@ -36,9 +37,18 @@ button {
 button:hover {
   border-color: var(--hover-effect);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.arrow-up {
+  color: var(--positive);
+}
+
+.arrow-down {
+  color: var(--negative);
 }
 
 @media (prefers-color-scheme: light) {
