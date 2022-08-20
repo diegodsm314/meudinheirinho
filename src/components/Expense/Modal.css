@@ -28,7 +28,7 @@
      background-color: var(--active-effect);
  }
  
-
+/* OK button */
 .div-btn-ok {
     display: flex;
     justify-content: flex-end;
@@ -51,3 +51,24 @@
 .button-ok:active {
     background-color: #87ddbd;    
 }
+/* General Settings */
+.btn-income,
+.btn-outcome {
+    background-color: transparent;
+}
+
+.btn-income:hover,
+.btn-outcome:hover {
+    border: none;
+}
+
+/* Income button */
+.btn-income:hover {
+    background-color: #d1dfd7;
+}
+
+/* Outcome button */
+.btn-outcome:hover {
+    background-color: #f0d2d2;
+}
+

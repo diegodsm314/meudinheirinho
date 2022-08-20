@@ -59,11 +59,11 @@ export function ModalUnique() {
 
                             <ButtonToolbar>
                                 <ButtonGroup className="me-2 group-outline">
-                                    <ToggleButton id="tbg-radio-1" value={1}className="outline-border" variant="outline-success" onClick={() => { setStatus(true) }}> <ArrowUpCircle className='icon-card arrow-up' /> Entrada
+                                    <ToggleButton id="tbg-radio-1" value={1} className="outline-border btn-income" variant="outline-success" onClick={() => { setStatus(true) }}> <ArrowUpCircle className='icon-card arrow-up' /> Entrada
                                     </ToggleButton>
                                 </ButtonGroup>
                                 <ButtonGroup className="group-outline">
-                                    <ToggleButton id="tbg-radio-2" value={2}className="outline-border" variant="outline-danger" onClick={() => { setStatus(false) }}> <ArrowDownCircle className='icon-card arrow-down' /> Saída
+                                    <ToggleButton id="tbg-radio-2" value={2} className="outline-border btn-outcome" variant="outline-danger" onClick={() => { setStatus(false) }}> <ArrowDownCircle className='icon-card arrow-down' /> Saída
                                     </ToggleButton>
                                 </ButtonGroup>
                             </ButtonToolbar>
