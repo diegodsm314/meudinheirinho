@@ -2,10 +2,10 @@ import React, { useContext, useState } from 'react';
 import { Button, ButtonGroup, ButtonToolbar, ToggleButton } from 'react-bootstrap';
 import { FloatingLabel, Form, Modal } from 'react-bootstrap';
 import { ArrowUpCircle, ArrowDownCircle } from 'react-bootstrap-icons';
-import './Modal.css';
+import './Expense.css';
 
 
-export function ModalUnique() {
+export function Expense() {
     const [show, setShow] = useState(false);
     const [active, setActive] = useState(false);
 
