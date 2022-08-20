@@ -4,7 +4,7 @@ import { Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
 import GlobalContext from "../../context/GlobalContext";
 import image from '../../../public/vite.svg';
 import { Login } from '../Login/Login';
-import { ModalUnique } from '../Expense/Modal';
+import { Expense } from '../Expense/Expense';
 import '../../App.css';
 import './Header.css';
 
@@ -43,7 +43,7 @@ export function Header() {
                             </Nav>
                             <div className="buttons mb-2">
                                 <Login></Login>
-                                <ModalUnique></ModalUnique>
+                                <Expense></Expense>
                             </div>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

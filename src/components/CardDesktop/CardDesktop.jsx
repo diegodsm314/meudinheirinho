@@ -1,11 +1,11 @@
 import { useState, useEffect, useContext } from 'react';
 import Card from 'react-bootstrap/Card';
 import './Card.css';
-import data from '../../services/data';
+import data from '../../../services/data';
 import { ArrowUpCircle, ArrowDownCircle, CurrencyDollar} from 'react-bootstrap-icons';
-import GlobalContext from '../../context/GlobalContext';
+import GlobalContext from '../../../context/GlobalContext';
 
-function CardUnique() {
+function CardDesktop() {
   const globalCtx = useContext(GlobalContext);
   const [expen, setExpen] = useState(0.00);
   const [value, setValue] = useState(0.00);
@@ -72,4 +72,4 @@ function CardUnique() {
   )
 }
 
-export default CardUnique;
+export default CardDesktop;

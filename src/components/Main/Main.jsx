@@ -1,8 +1,8 @@
 import React from "react";
-import CardUnique from "../Card/Card";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import { TableUnique } from "../Table/Table";
+import { Container, Row } from 'react-bootstrap';
+import CardDesktop from "../CardDesktop/CardDesktop";
+import TableUnique from "../Table/Table";
+import List  from "../List/List";
 
 
 export function Main() {
@@ -10,10 +10,11 @@ export function Main() {
         <>
             <Container>
                 <Row>
-                    <CardUnique></CardUnique>
+                    <CardDesktop id="card-desktop"></CardDesktop>
                 </Row>
                 <Row>
-                    <TableUnique></TableUnique>
+                    <TableUnique id="table"></TableUnique>
+                    <List id="list"></List>
                 </Row>
             </Container>
         </>
