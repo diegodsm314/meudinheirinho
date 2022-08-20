@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import { Form, Button } from "react-bootstrap";
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import './Modal.css';
-import Modal from 'react-bootstrap/Modal';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import { Button, FloatingLabel, Form, Modal  } from "react-bootstrap";
 import { ArrowUpCircle, ArrowDownCircle } from 'react-bootstrap-icons';
+import './Modal.css';
 
 
 export function ModalUnique() {
@@ -57,11 +57,16 @@ export function ModalUnique() {
                             >
                                 <Form.Control type="text" placeholder="Preço" onChange={(evento) => setPrice(evento.target.value)} />
                             </FloatingLabel>
-                            <div className="flex-btn">
-                                <Button className="outline-border" variant="outline" onClick={() => {setStatus(true)}}> <ArrowUpCircle className='icon-card arrow-up'/> Entrada</Button>
-                                <Button className="outline-border" variant="outline"  onClick={() => {setStatus(false)}}> <ArrowDownCircle className='icon-card arrow-down'/> Saída</Button>
-                            </div>
 
+                            <ButtonToolbar>
+                                <ButtonGroup className="me-2 group-outline">
+                                    <Button className="outline-border" variant="outline" onClick={() => {setStatus(true)}}> <ArrowUpCircle className='icon-card arrow-up'/> Entrada</Button>
+                                </ButtonGroup>
+                                <ButtonGroup className="group-outline">
+                                    <Button className="outline-border" variant="outline"  onClick={() => {setStatus(false)}}> <ArrowDownCircle className='icon-card arrow-down'/> Saída</Button>
+                                </ButtonGroup>
+                            </ButtonToolbar>
+                    
                             <FloatingLabel
                                 controlId="floatingInput"
                                 label="Categoria"

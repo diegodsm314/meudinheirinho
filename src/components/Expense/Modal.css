@@ -9,7 +9,10 @@
     border: 1.5px solid #d3d3d3;
     padding: 16px 12px;
     margin-bottom: 16px;
-    width: 50%;
+}
+
+.group-outline {
+    width: 49%;
 }
  
  .btn-login{
