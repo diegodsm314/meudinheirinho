@@ -1,0 +1,43 @@
+.title{
+    color: var(--title);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Cards items*/
+.list-card {
+    box-shadow: none;
+    width: 100%;
+}
+
+.list-card-title,
+.description,
+.details {
+    font-size: 14px;
+}
+
+.list-card-title {
+    color: var(--title);
+}
+
+.description,
+.details {
+    color: var(--text);
+}
+
+.list-card-title,
+.details {
+    font-weight: 400;
+}
+
+.description {
+    font-weight: 500;
+}
+
+.item { 
+    background-color: var(--white);
+    border: 6px solid var(--background);
+}
+
+
+
