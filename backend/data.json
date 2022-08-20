@@ -45,7 +45,7 @@
           "statusEntry": false
         },
         {
-          "price": 0.50,
+          "price": -0.50,
           "title": "teste4",
           "category": "testeCategoria2",
           "date": "01/02/2000",

@@ -7,18 +7,17 @@ import GlobalContext from "../../context/GlobalContext";
 export function TableUnique() {
     const globalCtx = useContext(GlobalContext);
     const [tab,setTab] = useState();
+    const [entry,setEntry] = useState([]);
 
     useEffect(() => {
         data.get("count").then(function (response){
             const aux = response.data;
             const baux = aux.filter(user => user.idUser == globalCtx.idUser)
             setTab(baux[0]);
+            setEntry(baux[0].entry);
         })  
     }, [globalCtx]);
-
-    console.log(tab);
     
-
     return (
         <div className="table">
             <Table>
@@ -31,12 +30,17 @@ export function TableUnique() {
                     </tr>
                 </thead>
                 <tbody className="row-item">
-                    <tr>
-                        <td>{"Sem"}</td>
-                        <td>{"acesso"}</td>
-                        <td>{"de"}</td>
-                        <td>{"dados"}</td>
-                    </tr>
+                {entry.map((it,id)=>{
+                            return(
+                                <tr key={id}>
+                                <td >{it.title}</td>
+                                <td >{new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(it.price)}</td>
+                                <td >{it.category}</td>
+                                <td >{it.date}</td>
+                            </tr>
+                            )
+                        })}
+
                 </tbody>
             </Table>
         </div>
