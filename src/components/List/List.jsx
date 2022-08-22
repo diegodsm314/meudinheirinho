@@ -4,7 +4,7 @@ import './List.css';
 import data from "../../services/data";
 import GlobalContext from "../../context/GlobalContext";
 
-export function List() {
+export default function List() {
     const globalCtx = useContext(GlobalContext);
     const [tab, setTab] = useState();
     const [entry, setEntry] = useState([]);
@@ -28,7 +28,7 @@ export function List() {
                 {entry.map((it, id) => {
                     return (
                         <>
-                            <ListGroup.Item className="item">
+                            <ListGroup.Item className="item" key={id}>
                                 <Card className="list-card">
                                     <Card.Body>
                                         <Card.Title className="list-card-title">{it.title}</Card.Title>

@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from 'react';
 import Card from 'react-bootstrap/Card';
-import './Card.css';
-import data from '../../../services/data';
+import './CardDesktop.css';
+import data from '../../services/data';
 import { ArrowUpCircle, ArrowDownCircle, CurrencyDollar} from 'react-bootstrap-icons';
-import GlobalContext from '../../../context/GlobalContext';
+import GlobalContext from '../../context/GlobalContext';
 
 function CardDesktop() {
   const globalCtx = useContext(GlobalContext);

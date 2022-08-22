@@ -4,7 +4,7 @@ import './Table.css';
 import data from "../../services/data";
 import GlobalContext from "../../context/GlobalContext";
 
-export function TableUnique() {
+export default function TableUnique() {
     const globalCtx = useContext(GlobalContext);
     const [tab, setTab] = useState();
     const [entry, setEntry] = useState([]);

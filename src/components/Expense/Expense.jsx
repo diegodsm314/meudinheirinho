@@ -1,13 +1,18 @@
-import React, { useContext, useState } from 'react';
-import { Button, ButtonGroup, ButtonToolbar, ToggleButton } from 'react-bootstrap';
-import { FloatingLabel, Form, Modal } from 'react-bootstrap';
+import React, { useContext, useState, useEffect } from 'react';
+import { Button, ToggleButtonGroup, ButtonToolbar, ToggleButton, FloatingLabel, Form, Modal } from 'react-bootstrap';
 import { ArrowUpCircle, ArrowDownCircle } from 'react-bootstrap-icons';
 import './Expense.css';
+import GlobalContext from "../../context/GlobalContext";
+import axios from 'axios';
+import data from '../../services/data';
 
 
 export function Expense() {
+    const globalCtx = useContext(GlobalContext);
     const [show, setShow] = useState(false);
-    const [active, setActive] = useState(false);
+    const [tab, setTab] = useState();
+    const [entry, setEntry] = useState([]);
+    
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -19,6 +24,15 @@ export function Expense() {
         else return text;
     }
 
+    useEffect(() => {
+        data.get("count").then(function (response) {
+            const aux = response.data;
+            const baux = aux.filter(user => user.idUser == globalCtx.idUser)
+            setTab(baux[0]);
+            setEntry(baux[0].entry);
+        })
+    }, [globalCtx]);
+
     const dating = () => {
         const today = new Date();
         return `${character(today.getDay())}/${character(today.getMonth())}/${today.getFullYear()}`
@@ -29,6 +43,26 @@ export function Expense() {
     const [category, setCategory] = useState("");
     const [date, setDate] = useState(dating);
     const [status, setStatus] = useState(false);
+
+    function newPost(){
+        entry.push({
+            "price": status ? price: (-price),
+            "title": title,
+            "category": category,
+            "date": date,
+            "statusEntry": status
+        })
+        console.log(entry);
+        axios.put(`/count/${globalCtx.idUser-1000}`,{
+            "id": tab.id,
+            "idUser": tab.idUser,
+            "countExpense": tab.countExpense,
+            "countValue": tab.countValue,
+            "entry": entry
+        }).then((response)=>{
+            console.log(response)
+        }) 
+    }
 
     return (
         <>
@@ -58,14 +92,12 @@ export function Expense() {
                             </FloatingLabel>
 
                             <ButtonToolbar>
-                                <ButtonGroup className="me-2 group-outline">
+                                <ToggleButtonGroup className="me-2 group-outline"  type="radio" name="options">
                                     <ToggleButton id="tbg-radio-1" value={1} className="outline-border btn-income" variant="outline-success" onClick={() => { setStatus(true) }}> <ArrowUpCircle className='icon-card arrow-up' /> Entrada
                                     </ToggleButton>
-                                </ButtonGroup>
-                                <ButtonGroup className="group-outline">
                                     <ToggleButton id="tbg-radio-2" value={2} className="outline-border btn-outcome" variant="outline-danger" onClick={() => { setStatus(false) }}> <ArrowDownCircle className='icon-card arrow-down' /> Saída
                                     </ToggleButton>
-                                </ButtonGroup>
+                                </ToggleButtonGroup>
                             </ButtonToolbar>
 
                             <FloatingLabel
@@ -77,7 +109,7 @@ export function Expense() {
                             </FloatingLabel>
 
                             <div className="div-btn-update">
-                                <Button className="button-update" onClick={() => { }}>Cadastrar</Button>
+                                <Button className="button-update" onClick={() => {newPost()}}>Cadastrar</Button>
                             </div>
                         </Form>
                     </Modal.Body>

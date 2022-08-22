@@ -19,33 +19,40 @@
     {
       "id": 1,
       "idUser": 1001,
-      "countExpense": 1.00,
-      "countValue": 1.00,
+      "countExpense": 1,
+      "countValue": 1,
       "entry": [
         {
-          "price": 1.00,
+          "price": 1,
           "title": "teste",
           "category": "testeCategoria",
           "date": "01/01/2000",
           "statusEntry": true
+        },
+        {
+          "price": -1,
+          "title": "teste1",
+          "category": "testeCategoria1",
+          "date": "02/01/2000",
+          "statusEntry": false
         }
       ]
     },
     {
       "id": 2,
       "idUser": 1002,
-      "countExpense": 2.00,
-      "countValue": 1.00,
+      "countExpense": 2,
+      "countValue": 1,
       "entry": [
         {
-          "price": 0.50,
+          "price": 0.5,
           "title": "teste2",
           "category": "testeCategoria",
           "date": "01/01/2000",
           "statusEntry": false
         },
         {
-          "price": -0.50,
+          "price": -0.5,
           "title": "teste4",
           "category": "testeCategoria2",
           "date": "01/02/2000",
