@@ -3,7 +3,6 @@ import { Button, ToggleButtonGroup, ButtonToolbar, ToggleButton, FloatingLabel, 
 import { ArrowUpCircle, ArrowDownCircle } from 'react-bootstrap-icons';
 import './Expense.css';
 import GlobalContext from "../../context/GlobalContext";
-import axios from 'axios';
 import data from '../../services/data';
 
 
@@ -12,6 +11,8 @@ export function Expense() {
     const [show, setShow] = useState(false);
     const [tab, setTab] = useState();
     const [entry, setEntry] = useState([]);
+    const [expen, setExpen] = useState(0.00);
+    const [value, setValue] = useState(0.00);
     
 
     const handleClose = () => setShow(false);
@@ -30,6 +31,8 @@ export function Expense() {
             const baux = aux.filter(user => user.idUser == globalCtx.idUser)
             setTab(baux[0]);
             setEntry(baux[0].entry);
+            setExpen(baux[0].countExpense);
+            setValue(baux[0].countValue);
         })
     }, [globalCtx]);
 
@@ -52,16 +55,17 @@ export function Expense() {
             "date": date,
             "statusEntry": status
         })
+        console.log(tab);
         console.log(entry);
-        axios.put(`/count/${globalCtx.idUser-1000}`,{
+        data.put(`/count/${globalCtx.idUser-1000}`,{
             "id": tab.id,
             "idUser": tab.idUser,
-            "countExpense": tab.countExpense,
-            "countValue": tab.countValue,
+            "countExpense": tab.countExpense+expen,
+            "countValue": tab.countValue+value,
             "entry": entry
         }).then((response)=>{
             console.log(response)
-        }) 
+        })
     }
 
     return (

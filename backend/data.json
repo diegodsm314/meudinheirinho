@@ -35,6 +35,13 @@
           "category": "testeCategoria1",
           "date": "02/01/2000",
           "statusEntry": false
+        },
+        {
+          "price": -12,
+          "title": "Maça",
+          "category": "Sacolão",
+          "date": "01/07/2022",
+          "statusEntry": false
         }
       ]
     },

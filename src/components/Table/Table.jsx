@@ -8,6 +8,8 @@ export default function TableUnique() {
     const globalCtx = useContext(GlobalContext);
     const [tab, setTab] = useState();
     const [entry, setEntry] = useState([]);
+    const [expen, setExpen] = useState(0.00);
+    const [value, setValue] = useState(0.00);
 
     useEffect(() => {
         data.get("count").then(function (response) {
