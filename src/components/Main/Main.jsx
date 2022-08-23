@@ -5,16 +5,16 @@ import TableUnique from "../Table/Table";
 import List  from "../List/List";
 
 
-export function Main() {
+export function Main(props) {
     return (
         <>
             <Container>
                 <Row>
-                    <CardDesktop id="card-desktop"></CardDesktop>
+                    <CardDesktop switch={props.switch} id="card-desktop"></CardDesktop>
                 </Row>
                 <Row>
-                    <TableUnique id="table"></TableUnique>
-                    <List id="list"></List>
+                    <TableUnique switch={props.switch} id="table"></TableUnique>
+                    <List switch={props.switch} id="list"></List>
                 </Row>
             </Container>
         </>

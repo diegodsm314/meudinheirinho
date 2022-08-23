@@ -4,12 +4,11 @@ import './Table.css';
 import data from "../../services/data";
 import GlobalContext from "../../context/GlobalContext";
 
-export default function TableUnique() {
+export default function TableUnique(props) {
     const globalCtx = useContext(GlobalContext);
     const [tab, setTab] = useState();
     const [entry, setEntry] = useState([]);
-    const [expen, setExpen] = useState(0.00);
-    const [value, setValue] = useState(0.00);
+
 
     useEffect(() => {
         data.get("count").then(function (response) {
@@ -18,7 +17,7 @@ export default function TableUnique() {
             setTab(baux[0]);
             setEntry(baux[0].entry);
         })
-    }, [globalCtx]);
+    }, [globalCtx, props.switch]);
 
     return (
         <div className="table">

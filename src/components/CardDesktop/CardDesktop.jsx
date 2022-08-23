@@ -5,7 +5,7 @@ import data from '../../services/data';
 import { ArrowUpCircle, ArrowDownCircle, CurrencyDollar} from 'react-bootstrap-icons';
 import GlobalContext from '../../context/GlobalContext';
 
-function CardDesktop() {
+function CardDesktop(props) {
   const globalCtx = useContext(GlobalContext);
   const [expen, setExpen] = useState(0.00);
   const [value, setValue] = useState(0.00);
@@ -18,7 +18,7 @@ function CardDesktop() {
           setExpen(baux[0].countExpense);
           setValue(baux[0].countValue)
       })  
-  }, [globalCtx]);
+  }, [globalCtx, props.switch]);
 
 
   function handleClass(){

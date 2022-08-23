@@ -6,15 +6,12 @@ import GlobalContext from "../../context/GlobalContext";
 import data from '../../services/data';
 
 
-export function Expense() {
+export function Expense(props) {
     const globalCtx = useContext(GlobalContext);
     const [show, setShow] = useState(false);
     const [tab, setTab] = useState();
     const [entry, setEntry] = useState([]);
-    const [expen, setExpen] = useState(0.00);
-    const [value, setValue] = useState(0.00);
     
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -31,8 +28,6 @@ export function Expense() {
             const baux = aux.filter(user => user.idUser == globalCtx.idUser)
             setTab(baux[0]);
             setEntry(baux[0].entry);
-            setExpen(baux[0].countExpense);
-            setValue(baux[0].countValue);
         })
     }, [globalCtx]);
 
@@ -55,13 +50,12 @@ export function Expense() {
             "date": date,
             "statusEntry": status
         })
-        console.log(tab);
-        console.log(entry);
+        props.switch();
         data.put(`/count/${globalCtx.idUser-1000}`,{
             "id": tab.id,
             "idUser": tab.idUser,
-            "countExpense": tab.countExpense+expen,
-            "countValue": tab.countValue+value,
+            "countExpense": !status ? (parseFloat(tab.countExpense)+price) : parseFloat(tab.countExpense),
+            "countValue": !status ? parseFloat(tab.countValue) :(parseFloat(tab.countValue)+price),
             "entry": entry
         }).then((response)=>{
             console.log(response)
@@ -92,7 +86,7 @@ export function Expense() {
                                 label="Preço"
                                 className="mb-3"
                             >
-                                <Form.Control type="text" placeholder="Preço" onChange={(evento) => setPrice(evento.target.value)} />
+                                <Form.Control type="text" placeholder="Preço" onChange={(evento) => setPrice(parseFloat(evento.target.value))} />
                             </FloatingLabel>
 
                             <ButtonToolbar>

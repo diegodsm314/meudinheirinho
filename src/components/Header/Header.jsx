@@ -9,7 +9,7 @@ import '../../App.css';
 import './Header.css';
 
 
-export function Header() {
+export function Header(props) {
     const globalCtx = useContext(GlobalContext);
     const [nome, setNome] = useState("");
 
@@ -43,7 +43,7 @@ export function Header() {
                             </Nav>
                             <div className="buttons mb-2">
                                 <Login></Login>
-                                <Expense></Expense>
+                                <Expense switch={props.switch}></Expense>
                             </div>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

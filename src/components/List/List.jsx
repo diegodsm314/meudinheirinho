@@ -4,7 +4,7 @@ import './List.css';
 import data from "../../services/data";
 import GlobalContext from "../../context/GlobalContext";
 
-export default function List() {
+export default function List(props) {
     const globalCtx = useContext(GlobalContext);
     const [tab, setTab] = useState();
     const [entry, setEntry] = useState([]);
@@ -16,7 +16,7 @@ export default function List() {
             setTab(baux[0]);
             setEntry(baux[0].entry);
         })
-    }, [globalCtx]);
+    }, [globalCtx, props.switch]);
 
     return (
         <div className="list">

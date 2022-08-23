@@ -35,21 +35,14 @@
           "category": "testeCategoria1",
           "date": "02/01/2000",
           "statusEntry": false
-        },
-        {
-          "price": -12,
-          "title": "Maça",
-          "category": "Sacolão",
-          "date": "01/07/2022",
-          "statusEntry": false
         }
       ]
     },
     {
       "id": 2,
       "idUser": 1002,
-      "countExpense": 2,
-      "countValue": 1,
+      "countExpense": 720,
+      "countValue": 1200,
       "entry": [
         {
           "price": 0.5,
@@ -63,6 +56,27 @@
           "title": "teste4",
           "category": "testeCategoria2",
           "date": "01/02/2000",
+          "statusEntry": false
+        },
+        {
+          "price": -12,
+          "title": "Maça",
+          "category": "Salario",
+          "date": "01/07/2022",
+          "statusEntry": false
+        },
+        {
+          "price": 1200,
+          "title": "Salario",
+          "category": "Salario",
+          "date": "01/07/2022",
+          "statusEntry": true
+        },
+        {
+          "price": -700,
+          "title": "Aluguel",
+          "category": "Aluguel",
+          "date": "01/07/2022",
           "statusEntry": false
         }
       ]
