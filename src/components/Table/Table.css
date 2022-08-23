@@ -11,3 +11,17 @@
 tr {
     border: 6px solid var(--background);
 }
+
+.red-value{
+    color: var(--negative);
+}
+
+.green-value{
+    color: var(--positive);
+}
+
+@media screen and (max-width: 992px) {
+    .table{
+        display: none;
+    }
+}

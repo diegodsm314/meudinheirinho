@@ -54,8 +54,8 @@ export function Expense(props) {
         data.put(`/count/${globalCtx.idUser-1000}`,{
             "id": tab.id,
             "idUser": tab.idUser,
-            "countExpense": !status ? (parseFloat(tab.countExpense)+price) : parseFloat(tab.countExpense),
-            "countValue": !status ? parseFloat(tab.countValue) :(parseFloat(tab.countValue)+price),
+            "countExpense": !status ? ((tab.countExpense)+price) : (tab.countExpense),
+            "countValue": !status ? (tab.countValue) :((tab.countValue)+price),
             "entry": entry
         }).then((response)=>{
             console.log(response)
@@ -107,7 +107,7 @@ export function Expense(props) {
                             </FloatingLabel>
 
                             <div className="div-btn-update">
-                                <Button className="button-update" onClick={() => {newPost()}}>Cadastrar</Button>
+                                <Button className="button-update" onClick={() => {newPost();handleClose()}}>Cadastrar</Button>
                             </div>
                         </Form>
                     </Modal.Body>

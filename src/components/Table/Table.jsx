@@ -19,6 +19,15 @@ export default function TableUnique(props) {
         })
     }, [globalCtx, props.switch]);
 
+    function handleClass(item) {
+        if ((item) < 0) {
+          return "red-value";
+        }
+        else {
+          return "green-value";
+        }
+      }
+
     return (
         <div className="table">
             <Table borderless>
@@ -35,7 +44,7 @@ export default function TableUnique(props) {
                         return (
                             <tr key={id}>
                                 <td >{it.title}</td>
-                                <td >{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(it.price)}</td>
+                                <td className={handleClass(it.price)}>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(it.price)}</td>
                                 <td >{it.category}</td>
                                 <td >{it.date}</td>
                             </tr>

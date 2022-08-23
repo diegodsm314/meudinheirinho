@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import CardDesktop from "../CardDesktop/CardDesktop";
 import TableUnique from "../Table/Table";
 import List  from "../List/List";
+import CardMobile from "../CardMobile/CardMobile";
 
 
 export function Main(props) {
@@ -10,6 +11,7 @@ export function Main(props) {
         <>
             <Container>
                 <Row>
+                    <CardMobile switch={props.switch} id="card-mobile"></CardMobile>
                     <CardDesktop switch={props.switch} id="card-desktop"></CardDesktop>
                 </Row>
                 <Row>

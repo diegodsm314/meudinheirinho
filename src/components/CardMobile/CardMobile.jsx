@@ -5,7 +5,7 @@ import './CardMobile.css';
 import data from '../../services/data';
 import GlobalContext from '../../context/GlobalContext';
 
-function CardMobile() {
+function CardMobile(props) {
 
   const globalCtx = useContext(GlobalContext);
   const [expen, setExpen] = useState(0.00);
@@ -19,7 +19,7 @@ function CardMobile() {
       setExpen(baux[0].countExpense);
       setValue(baux[0].countValue)
     })
-  }, [globalCtx]);
+  }, [globalCtx,props.switch]);
 
 
   function handleClass() {
@@ -38,7 +38,7 @@ function CardMobile() {
 
   return (
     <div className='summary'>
-      <Carousel activeIndex={index} onSelect={handleSelect} variant="dark">
+      <Carousel activeIndex={index} controls={false} onSelect={handleSelect} variant="dark">
         <Carousel.Item>
           <Card className="card white-card">
             <Card.Body>
@@ -47,8 +47,7 @@ function CardMobile() {
                 <ArrowUpCircle className='icon-card arrow-up' />
               </div>
               <Card.Text className="card-text">
-                R$ {(value).toFixed(2)}
-                <span className='white-card'>Última entrada dia { }</span>
+              {new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(value)}
               </Card.Text>
             </Card.Body>
           </Card>
@@ -61,28 +60,25 @@ function CardMobile() {
                 <ArrowDownCircle className='icon-card arrow-down' />
               </div>
               <Card.Text className="card-text">
-                R$ {(expen).toFixed(2)}
-                <span className='white-card'>Última entrada dia { }</span>
+              {new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(expen)}
               </Card.Text>
             </Card.Body>
           </Card>
         </Carousel.Item>
         <Carousel.Item>
-          <Card className="card green-card">
+          <Card className={handleClass}>
             <Card.Body>
               <div className='div-card-title'>
                 <Card.Title className="card-title">Total</Card.Title>
                 <CurrencyDollar className='icon-card' />
               </div>
               <Card.Text className="card-text">
-                R$ {(value - expen).toFixed(2)}
-                <span className='span-green'>Última entrada dia { }</span>
+              {new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(value-expen)}
               </Card.Text>
             </Card.Body>
           </Card>
         </Carousel.Item>
       </Carousel>
-      render(<CardMobile />);
     </div>
   );
 }

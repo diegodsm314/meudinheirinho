@@ -31,7 +31,7 @@ function CardDesktop(props) {
   }
 
   return (
-    <div className="summary">
+    <div className="summary-desktop">
       <Card className="card white-card">
         <Card.Body>
           <div className='div-card-title'>
@@ -40,7 +40,6 @@ function CardDesktop(props) {
           </div>
           <Card.Text className="card-text">
             {new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(value)}
-            <span className='white-card'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
       </Card>
@@ -52,7 +51,6 @@ function CardDesktop(props) {
         </div>
           <Card.Text className="card-text">
           {new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(expen)}
-            <span className='white-card'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
       </Card>
@@ -64,7 +62,6 @@ function CardDesktop(props) {
           </div>
           <Card.Text className="card-text">
           {new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(value-expen)}
-            <span className='span-green'>Última entrada dia {}</span>
           </Card.Text>
         </Card.Body>
       </Card>

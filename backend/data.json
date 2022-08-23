@@ -13,13 +13,20 @@
       "email": "test@test.com",
       "idUser": 1002,
       "password": "useruser"
+    },
+    {
+      "id": 3,
+      "user": "Google",
+      "email": "google@google.com",
+      "idUser": 1003,
+      "password": "google"
     }
   ],
   "count": [
     {
       "id": 1,
       "idUser": 1001,
-      "countExpense": 1,
+      "countExpense": 2.2,
       "countValue": 1,
       "entry": [
         {
@@ -35,14 +42,21 @@
           "category": "testeCategoria1",
           "date": "02/01/2000",
           "statusEntry": false
+        },
+        {
+          "price": -1.2,
+          "title": "Maça",
+          "category": "admin",
+          "date": "02/07/2022",
+          "statusEntry": false
         }
       ]
     },
     {
       "id": 2,
       "idUser": 1002,
-      "countExpense": 720,
-      "countValue": 1200,
+      "countExpense": 0.5,
+      "countValue": 0.5,
       "entry": [
         {
           "price": 0.5,
@@ -57,27 +71,35 @@
           "category": "testeCategoria2",
           "date": "01/02/2000",
           "statusEntry": false
-        },
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "idUser": 1003,
+      "countExpense": 212.46,
+      "countValue": 2420.8,
+      "entry": [
         {
-          "price": -12,
-          "title": "Maça",
+          "price": 2300,
+          "title": "Salario Abril 2022",
           "category": "Salario",
-          "date": "01/07/2022",
-          "statusEntry": false
-        },
-        {
-          "price": 1200,
-          "title": "Salario",
-          "category": "Salario",
-          "date": "01/07/2022",
+          "date": "02/07/2022",
           "statusEntry": true
         },
         {
-          "price": -700,
-          "title": "Aluguel",
-          "category": "Aluguel",
-          "date": "01/07/2022",
+          "price": -212.46,
+          "title": "Supermercado",
+          "category": "Alimentação",
+          "date": "02/07/2022",
           "statusEntry": false
+        },
+        {
+          "price": 120.8,
+          "title": "Peer Bonus",
+          "category": "Salario",
+          "date": "02/07/2022",
+          "statusEntry": true
         }
       ]
     }
