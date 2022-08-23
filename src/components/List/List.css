@@ -1,3 +1,9 @@
+.list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+}
 .title{
     color: var(--title);
     font-weight: 400;

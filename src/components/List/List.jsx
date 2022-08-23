@@ -29,7 +29,7 @@ export default function List(props) {
 
     return (
         <div className="list">
-            <div>
+            <div className="list-header">
                 <h2 className="title">Listagem</h2>
                 <span className="description"><p>{entry.length} itens</p></span>
             </div>
