@@ -9,12 +9,11 @@
     font: 400 normal 'Poppins';
 }
 
-@media screen and (min-width: 992px) {
-    .summary {
-        display: none;   
-    }
+.card-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .card {
     border: none;
@@ -42,17 +41,23 @@
 
 span {
     display: block;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.green-card {
+    background-color: var(--positive);
 }
 
 .white-card {
     color: var(--title);
 }
 
-.green-card {
-    background-color: var(--positive);
-    color: var(--white);
+.span-white {
+    color: var(--text);
 }
 
-span.white-card {
-    color: var(--text);
+.green-card, 
+.span-green {
+    color: var(--white);
 }
