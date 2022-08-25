@@ -33,7 +33,7 @@ export default function List(props) {
                 <h2 className="title">Listagem</h2>
                 <span className="description"><p>{entry.length} itens</p></span>
             </div>
-            <ListGroup>
+            <ListGroup className="list-group">
                 {entry.map((it, id) => {
                     return (
                         <>

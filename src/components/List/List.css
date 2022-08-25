@@ -2,8 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.list-header, 
+.list-group {
     padding: 0 48px;
 }
+
 .title{
     color: var(--title);
     font-weight: 400;
